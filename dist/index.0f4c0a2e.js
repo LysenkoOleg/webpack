@@ -1,1 +1,0 @@
-(()=>{var e;document.body.prepend(((e=document.createElement("h1")).textContent="Проект собран на Webpack",e))})();

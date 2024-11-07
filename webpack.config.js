@@ -14,12 +14,16 @@ module.exports = {
 				test: /\.js$/,
 				use: "babel-loader",
 				exclude: /node_modules/,
+			},
+			{
+				test: /\.pug$/,
+				loader: "pug-loader"
 			}
 		]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, 'src', 'template.html'),
+			template: path.join(__dirname, 'src', 'template.pug'),
 			filename: 'index.html',
 		}),
 		new FileManagerPlugin({
