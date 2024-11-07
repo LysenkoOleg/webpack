@@ -1,6 +1,8 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FileManagerPlugin = require('filemanager-webpack-plugin')
 const path = require('path')
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 	entry: path.join(__dirname, 'src', 'index.js'),
@@ -21,7 +23,7 @@ module.exports = {
 			},
 			{
 				test: /\.(scss|css)$/,
-				use: ["style-loader", "css-loader", "postcss-loader", "sass-loader"],
+				use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
 			}
 		]
 	},
@@ -36,6 +38,9 @@ module.exports = {
 					delete: ['dist']
 				}
 			}
+		}),
+		new MiniCssExtractPlugin({
+			filename: "[name].[contenthash:4].css"
 		})
 	],
 	devServer: {
