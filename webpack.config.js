@@ -15,6 +15,10 @@ module.exports = {
 	module: {
 		rules: [
 			{
+				test: /\.(woff2?|eot|ttf|otf)$/i,
+				type: 'asset/resource',
+			},
+			{
 				test: /\.js$/,
 				use: "babel-loader",
 				exclude: /node_modules/,
