@@ -17,6 +17,9 @@ module.exports = {
 			{
 				test: /\.(woff2?|eot|ttf|otf)$/i,
 				type: 'asset/resource',
+				generator: {
+					filename: path.join('fonts', '[name].[contenthash][ext]')
+				},
 			},
 			{
 				test: /\.js$/,
@@ -53,6 +56,14 @@ module.exports = {
 			events: {
 				onStart: {
 					delete: ['dist']
+				},
+				onEnd: {
+					copy: [
+						{
+							source: path.join('src', 'static'),
+							destination: 'dist',
+						}
+					]
 				}
 			}
 		}),

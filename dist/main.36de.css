@@ -1,0 +1,6 @@
+html{font-size:1rem;color:rgb(140, 0, 26)}
+
+@media (color-gamut: p3){
+html{color:color(display-p3 0.52373 0 0.09429)}
+}.logo1{width:10em}.logo2{width:10em}
+@font-face{font-display:swap;font-family:"Roboto";font-style:normal;font-weight:400;src:url(fonts/roboto-v32-cyrillic_latin-regular.6a3f567f7b7f18ab86a1.woff2) format("woff2")}@font-face{font-display:swap;font-family:"Roboto";font-style:italic;font-weight:400;src:url(fonts/roboto-v32-cyrillic_latin-italic.adcacb7204e145a2a8b4.woff2) format("woff2")}@font-face{font-display:swap;font-family:"Roboto";font-style:normal;font-weight:700;src:url(fonts/roboto-v32-cyrillic_latin-700.07458d3acd0b634b8e62.woff2) format("woff2")}@font-face{font-display:swap;font-family:"Roboto";font-style:italic;font-weight:700;src:url(fonts/roboto-v32-cyrillic_latin-700italic.09dcffe9daf68d485a7f.woff2) format("woff2")}html{font-family:"Roboto",serif}
